@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5offer — Трудовые юристы</title>
+<meta name="description" content="При увольнении сохраним работу или обеспечим компенсацию 4–5 окладов">
+<meta name="yandex-verification" content="d561b244d1ceb966">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:url" content="https://5offer.ru">
+<meta property="og:site_name" content="5offer">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="5offer — трудовые юристы для IT и digital">
+<meta property="og:description" content="При увольнении сохраним работу или обеспечим компенсацию 4–5 окладов">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://5offer.ru/assets/og-preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="5offer — трудовые юристы для IT и digital: компенсация 4–5 окладов или сохраним работу">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://5offer.ru/assets/og-preview.jpg">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2EEE6;
+  --paper:#FBF9F4;
+  --ink:#231F1D;
+  --ink-2:#2B2523;
+  --ink-soft:#4A423E;
+  --muted:#8C837B;
+  --line:#E4DCD0;
+  --edge:#3A3330;
+  --red:#B3202A;
+  --red-deep:#8E1820;
+  --coral:#E8574D;
+  --blush:#F8E8E4;
+  --radius:16px;
+  --shadow:0 22px 44px -26px rgba(70,45,30,.38);
+  --wrap:1160px;
+  --harlequin:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28'%3E%3Cpath d='M14 0 28 14 14 28 0 14Z' fill='%23B3202A'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,-apple-system,Segoe UI,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+section{position:relative}
+.eyebrow{display:block;color:var(--red);font-weight:800;font-size:13px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:14px}
+.h2{font-weight:800;font-size:clamp(30px,4.2vw,50px);line-height:1.06;letter-spacing:-.02em;text-transform:uppercase}
+.lead{color:var(--ink-soft);font-size:18px;max-width:620px}
+.dia{display:inline-block;width:9px;height:9px;background:var(--red);transform:rotate(45deg);flex:none}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:56px;padding:0 28px;border-radius:999px;font-weight:700;font-size:16px;transition:transform .2s ease,background .2s ease,box-shadow .2s ease;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 14px 28px -14px rgba(179,32,42,.7)}
+.btn-red:hover{background:var(--red-deep)}
+.btn-ghost{border:1.5px solid var(--edge);color:var(--ink);background:var(--paper)}
+.btn-ghost:hover{background:#fff}
+.btn-cream{background:var(--paper);color:var(--ink)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(242,238,230,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .2s}
+.hdr.scrolled{border-bottom-color:var(--line)}
+.hdr .wrap{display:flex;align-items:center;gap:28px;height:76px}
+.logo img{height:34px;width:auto}
+.nav{display:flex;gap:28px;margin-left:12px}
+.nav a{font-weight:600;font-size:15px;color:var(--ink-soft);position:relative;padding:6px 0}
+.nav a::after{content:"";position:absolute;left:50%;bottom:0;width:6px;height:6px;background:var(--red);transform:translateX(-50%) rotate(45deg) scale(0);transition:transform .2s}
+.nav a:hover{color:var(--ink)}
+.nav a:hover::after{transform:translateX(-50%) rotate(45deg) scale(1)}
+.hdr-right{margin-left:auto;display:flex;align-items:center;gap:18px}
+.phone{font-weight:700;font-size:15px;white-space:nowrap}
+.tg{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;border:1.5px solid var(--edge);transition:background .2s,color .2s}
+.tg:hover{background:var(--ink);color:var(--paper)}
+.tg svg{width:18px;height:18px}
+.hdr .btn{min-height:44px;padding:0 22px;font-size:15px}
+.burger{display:none;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--edge);place-items:center}
+.burger span{display:block;width:18px;height:2px;background:var(--ink);position:relative;transition:transform .2s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink);transition:transform .2s,top .2s}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.menu-open .burger span{background:transparent}
+.menu-open .burger span::before{top:0;transform:rotate(45deg)}
+.menu-open .burger span::after{top:0;transform:rotate(-45deg)}
+.mnav{display:none}
+
+/* hero */
+.hero{padding:56px 0 40px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{font-weight:800;font-size:clamp(36px,5.6vw,72px);line-height:1.04;letter-spacing:-.03em;text-transform:uppercase}
+.hero h1 em{font-style:normal;color:var(--red);white-space:nowrap}
+.hero .lead{margin-top:26px}
+.hero .lead b{color:var(--ink)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.exp{margin-top:34px;padding-top:22px;border-top:1px solid var(--line);font-size:15px;color:var(--muted);max-width:560px}
+.exp b{color:var(--ink);font-weight:700}
+.hero-art{position:relative;justify-self:end;width:100%;max-width:470px}
+.frame{position:relative;border-radius:22px;overflow:hidden;border:1.5px solid var(--edge);box-shadow:var(--shadow);transform:rotate(1.6deg);background:var(--paper)}
+.frame img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center}
+.ticket{position:absolute;left:-34px;bottom:46px;transform:rotate(-4deg);background:var(--ink-2);color:var(--paper);border-radius:14px;padding:16px 20px 16px 18px;box-shadow:var(--shadow);max-width:250px}
+.ticket small{display:block;color:#B9AFA6;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.ticket strong{display:block;font-size:20px;line-height:1.2;margin-top:4px}
+.ticket strong span{color:var(--coral)}
+.st{position:absolute;pointer-events:none;will-change:transform}
+.st-a{width:120px;right:-30px;top:-46px}
+.st-b{width:96px;left:-18px;top:-30px;transform:rotate(-12deg)}
+
+/* marquee */
+.marquee{background:var(--ink-2);color:var(--paper);overflow:hidden;border-block:1.5px solid var(--edge);margin-top:40px}
+.marquee-track{display:flex;gap:0;width:max-content;animation:run 38s linear infinite}
+.marquee-track span{display:flex;align-items:center;gap:22px;padding:18px 22px;font-weight:700;font-size:15px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+.marquee-track span::after{content:"";width:10px;height:10px;background:var(--coral);transform:rotate(45deg)}
+@keyframes run{to{transform:translateX(-50%)}}
+
+/* help + stats */
+.block{padding:110px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:46px}
+.sec-head .lead{max-width:420px}
+.help{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.help-item{background:var(--paper);border:1.5px solid var(--edge);border-radius:var(--radius);padding:26px 26px 30px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:22px;min-height:190px;transition:transform .25s ease}
+.help-item:hover{transform:translateY(-4px) rotate(-.4deg)}
+.help-item .num{display:flex;align-items:center;justify-content:space-between;font-weight:800;color:var(--red);font-size:14px;letter-spacing:.18em}
+.help-item p{font-weight:700;font-size:20px;line-height:1.3}
+.stats{display:grid;grid-template-columns:1.25fr 1fr;gap:18px;margin-top:18px}
+.stat-dark{background:var(--ink-2);color:var(--paper);border-radius:var(--radius);padding:36px;display:grid;grid-template-columns:1fr 1fr;gap:28px;position:relative;overflow:hidden}
+.stat-dark .big{font-weight:800;font-size:clamp(40px,4.6vw,60px);line-height:1;letter-spacing:-.03em;white-space:nowrap}
+.stat-dark .big.coral{color:var(--coral)}
+.stat-dark p{color:#C9BFB6;margin-top:10px;font-size:15px}
+.stat-dark .full{grid-column:1/-1;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);display:flex;align-items:center;gap:14px;font-weight:600;color:var(--paper)}
+.stat-dark .full .dia{background:var(--coral)}
+.stat-photo{border-radius:var(--radius);overflow:hidden;border:1.5px solid var(--edge);box-shadow:var(--shadow);position:relative;min-height:280px}
+.stat-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 25%}
+.stat-photo .tag{position:absolute;left:16px;bottom:16px;background:var(--paper);border-radius:999px;padding:8px 16px;font-weight:700;font-size:14px;display:flex;gap:10px;align-items:center}
+
+/* tariffs */
+.tariffs{background:var(--paper);border-block:1.5px solid var(--line)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.plan{background:var(--bg);border:1.5px solid var(--edge);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column;box-shadow:var(--shadow);position:relative}
+.plan-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.plan h3{font-weight:800;font-size:26px;letter-spacing:-.01em;text-transform:uppercase;line-height:1.1}
+.plan .sub{font-size:14px;color:var(--muted);margin-top:6px}
+.badge{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;padding:6px 10px;border-radius:999px;background:var(--blush);color:var(--red);white-space:nowrap}
+.plan ul{list-style:none;display:flex;flex-direction:column;gap:12px;margin:24px 0}
+.plan li{display:flex;gap:12px;align-items:baseline}
+.plan li .dia{transform:rotate(45deg) translateY(-1px)}
+.or{font-size:12px;font-weight:800;letter-spacing:.2em;color:var(--muted);padding-left:21px}
+.fit{font-size:14px;color:var(--muted);line-height:1.5}
+.price{margin-top:auto;padding-top:24px}
+.pill{display:inline-flex;font-weight:800;font-size:28px;letter-spacing:-.01em;background:var(--red);color:#fff;border-radius:999px;padding:8px 22px}
+.pct{margin-top:14px;background:var(--blush);border-radius:12px;padding:14px 16px;font-size:15px}
+.pct small{display:block;color:var(--muted);font-size:13px;margin-bottom:4px}
+.pct b{color:var(--red);font-size:20px;font-weight:800}
+.plan .btn{margin-top:18px;width:100%}
+.plan.dark{background:var(--ink-2);color:var(--paper);border-color:var(--ink-2);transform:translateY(-14px)}
+.plan.dark::before{content:"";position:absolute;left:0;right:0;top:0;height:10px;border-radius:var(--radius) var(--radius) 0 0;background:var(--harlequin) 0 0/10px 10px repeat-x,#2B2523}
+.plan.dark .plan-top{border-color:rgba(255,255,255,.14)}
+.plan.dark .sub,.plan.dark .fit{color:#B9AFA6}
+.plan.dark .badge{background:var(--coral);color:#fff}
+.plan.dark .dia{background:var(--coral)}
+.plan.dark .pill{background:var(--paper);color:var(--ink)}
+.plan.dark .pct{background:#3A3230}
+.plan.dark .pct small{color:#B9AFA6}
+.plan.dark .pct b{color:var(--coral)}
+.extra{margin-top:28px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:var(--bg);border:1.5px dashed var(--edge);border-radius:var(--radius);padding:28px 32px}
+.extra h3{font-weight:800;font-size:22px;text-transform:uppercase;line-height:1.15;max-width:280px}
+.extra p{color:var(--ink-soft)}
+.note{font-size:14px;color:var(--muted);margin-top:18px;text-align:center}
+
+/* form */
+.formsec{overflow-x:clip}
+.formsec .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+.form-intro{position:sticky;top:110px}
+.form-intro .h2{margin-bottom:20px}
+.form-steps{list-style:none;margin-top:32px;display:flex;flex-direction:column;gap:16px}
+.form-steps li{display:flex;gap:14px;align-items:baseline;font-weight:600}
+.form-steps li span{color:var(--muted);font-weight:500}
+.form-card{background:var(--paper);border:1.5px solid var(--edge);border-radius:22px;box-shadow:var(--shadow);padding:20px;position:relative;min-height:420px}
+.form-card .st{width:86px;right:-26px;top:-38px}
+.form-fallback{color:var(--muted);font-size:14px;padding:12px}
+.form-fallback a{color:var(--red);font-weight:700}
+
+/* why */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1.5px solid var(--edge);border-radius:var(--radius);overflow:hidden;background:var(--paper);box-shadow:var(--shadow)}
+.why{padding:32px 30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:12px}
+.why:nth-child(3n){border-right:0}
+.why:nth-last-child(-n+3){border-bottom:0}
+.why .ico{width:48px;height:48px;border-radius:12px;background:var(--blush);display:grid;place-items:center;color:var(--red);margin-bottom:6px}
+.why .ico svg{width:24px;height:24px}
+.why h3{font-weight:800;font-size:19px;line-height:1.25}
+.why p{color:var(--ink-soft);font-size:15.5px}
+.nego{margin-top:22px;display:grid;grid-template-columns:1.15fr 1fr;background:var(--ink-2);color:var(--paper);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.nego img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/2}
+.nego-text{padding:40px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.nego-text .eyebrow{color:var(--coral);margin:0}
+.nego-text h3{font-weight:800;font-size:clamp(24px,2.6vw,32px);line-height:1.1;text-transform:uppercase}
+.nego-text p{color:#C9BFB6}
+.nego-text p span{color:var(--paper);font-weight:700}
+.nego-text .btn{align-self:flex-start;margin-top:8px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.step{background:var(--paper);border:1.5px solid var(--edge);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:14px;position:relative}
+.step .n{font-weight:800;font-size:60px;line-height:.9;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1.5px var(--red)}
+.step h3{font-weight:800;font-size:20px;text-transform:uppercase;line-height:1.15}
+.step p{color:var(--ink-soft);font-size:15.5px}
+.step .aside{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.step.final{background:var(--red);color:#fff;border-color:var(--red)}
+.step.final .n{-webkit-text-stroke-color:#fff}
+.step.final p,.step.final .aside{color:#FBE3E0}
+.step.final .aside{border-color:rgba(255,255,255,.25)}
+.smoothie{margin-top:18px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:var(--ink-2);color:var(--paper);border-radius:var(--radius);padding:22px 32px 22px 22px;overflow:hidden}
+.smoothie img{width:250px;height:250px;border-radius:14px;object-fit:cover;border:3px solid var(--paper);transform:rotate(-2deg)}
+.smoothie p{font-size:clamp(22px,3vw,38px);font-weight:800;line-height:1.15}
+.smoothie p span{display:block;font-size:17px;font-weight:500;color:#C9BFB6;margin-top:8px}
+
+/* reviews */
+.reviews{background:var(--paper);border-block:1.5px solid var(--line)}
+.rv-nav{display:flex;gap:10px}
+.rv-nav button{width:52px;height:52px;border-radius:50%;border:1.5px solid var(--edge);display:grid;place-items:center;transition:background .2s,color .2s}
+.rv-nav button:hover{background:var(--ink);color:var(--paper)}
+.rv-nav svg{width:20px;height:20px}
+.rv-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 36px)/3);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:6px}
+.rv-track::-webkit-scrollbar{display:none}
+.rv{scroll-snap-align:start;background:var(--bg);border:1.5px solid var(--edge);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:18px;box-shadow:var(--shadow)}
+.rv .q{font-size:64px;line-height:.6;font-weight:800;color:var(--red);height:28px}
+.rv p{font-size:15.5px;color:var(--ink-soft)}
+.rv .res{margin-top:auto;display:inline-flex;align-self:flex-start;gap:10px;align-items:center;background:var(--ink-2);color:var(--paper);font-weight:700;font-size:14px;border-radius:999px;padding:9px 16px}
+.rv .res .dia{background:var(--coral)}
+.rv-more{margin-top:30px;display:flex;justify-content:center}
+
+/* faq */
+.faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
+.faq-side{position:sticky;top:110px;align-self:start}
+.faq-side img{width:150px;margin-top:34px;transform:rotate(-6deg)}
+.faq-list{display:flex;flex-direction:column;gap:12px}
+.faq details{background:var(--paper);border:1.5px solid var(--edge);border-radius:14px;overflow:hidden}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 24px;font-weight:700;font-size:17.5px}
+.faq summary::-webkit-details-marker{display:none}
+.faq .pm{flex:none;width:34px;height:34px;border-radius:50%;background:var(--blush);display:grid;place-items:center;position:relative;transition:background .2s,transform .3s}
+.faq .pm::before,.faq .pm::after{content:"";position:absolute;width:12px;height:2px;background:var(--red);border-radius:2px;transition:transform .3s}
+.faq .pm::after{transform:rotate(90deg)}
+.faq details[open] .pm{background:var(--red)}
+.faq details[open] .pm::before,.faq details[open] .pm::after{background:#fff}
+.faq details[open] .pm::after{transform:rotate(0)}
+.faq .ans{padding:0 24px 24px;color:var(--ink-soft)}
+.faq .ans p+p{margin-top:10px}
+.faq .ans b{color:var(--ink)}
+
+/* contacts / footer */
+.block.contacts{padding:90px 0 20px}
+.c-card{background:var(--ink-2);color:var(--paper);border-radius:24px;padding:56px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;position:relative;overflow:hidden}
+/* telegram emoji */
+.emo-i{display:inline-block;height:1.2em;width:auto;vertical-align:-.24em;margin-left:.16em;transform:rotate(-6deg);transition:transform .3s}
+.emo-i:hover{transform:rotate(6deg) scale(1.08)}
+.emo{position:absolute;pointer-events:none;z-index:2}
+.stat-dark .emo{width:84px;right:26px;bottom:18px;opacity:.95}
+.plan.dark .emo{width:48px;right:104px;top:-30px;transform:rotate(10deg)}
+.step .emo{width:64px;right:16px;top:16px}
+.step.final .emo{width:74px;right:12px;top:10px;transform:rotate(8deg)}
+.hand{display:block;width:150px;margin-top:36px;transform:rotate(-8deg)}
+.c-card .emo{width:84px;right:46px;top:34px;opacity:.9}
+.c-card::after{content:"";position:absolute;right:0;top:0;bottom:0;width:14px;background:var(--harlequin) 0 0/14px 14px repeat-y}
+.c-card .h2{color:var(--paper)}
+.c-card .eyebrow{color:var(--coral)}
+.c-list{display:flex;flex-direction:column;gap:18px;font-size:16px}
+.c-list a.big{font-weight:800;font-size:clamp(24px,3vw,34px);letter-spacing:-.01em}
+.c-list a:hover{color:var(--coral)}
+.c-list .muted{color:#B9AFA6}
+.socials{display:flex;gap:12px;margin-top:8px}
+.socials a{width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(255,255,255,.35);display:grid;place-items:center;transition:background .2s,color .2s}
+.socials a:hover{background:var(--paper);color:var(--ink)}
+.socials svg{width:20px;height:20px}
+.foot{padding:40px 0 48px;text-align:center}
+.foot img{height:40px;width:auto;margin:0 auto}
+.foot .site{letter-spacing:.42em;font-weight:700;font-size:14px;margin-top:14px}
+.foot-links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;margin-top:22px;font-size:14px;color:var(--muted)}
+.foot-links a:hover{color:var(--red)}
+
+.legal{font-size:13px;color:var(--muted);margin-top:18px;line-height:1.6}
+
+/* reveal */
+/* challenge: piggy bank */
+.ch-card{position:relative;background:var(--ink-2);color:var(--paper);border-radius:24px;padding:52px;box-shadow:var(--shadow);overflow:hidden}
+.ch-card::before{content:"";position:absolute;left:0;right:0;top:0;height:12px;background:var(--harlequin) 0 0/12px 12px repeat-x,var(--red)}
+.ch-card .eyebrow{color:var(--coral)}
+.ch-card .h2{color:var(--paper)}
+.ch-card .lead{color:#C9BFB6;max-width:440px}
+.ch-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:40px}
+.ch-amount{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 14px;margin-bottom:18px}
+.ch-amount b{font-weight:800;font-size:clamp(40px,6vw,76px);line-height:1;letter-spacing:-.03em;color:var(--coral);white-space:nowrap}
+.ch-amount > span{font-weight:700;font-size:clamp(17px,2vw,22px);color:#B9AFA6;white-space:nowrap}
+.ch-bar{position:relative;height:40px;border-radius:999px;background:#3A3230;border:1.5px solid #4A403C;padding:4px}
+.ch-fill{position:relative;height:100%;width:30px;border-radius:999px;background:repeating-linear-gradient(-45deg,var(--red) 0 14px,var(--paper) 14px 28px);background-size:40px 40px;animation:ch-run 1.6s linear infinite;transition:width 1.8s cubic-bezier(.2,.8,.2,1);box-shadow:inset 0 -6px 10px rgba(0,0,0,.18)}
+.ch-card.on .ch-fill,html:not(.anim) .ch-fill{width:max(30px,var(--p,0%))}
+.ch-coin{position:absolute;right:-12px;top:50%;width:46px;height:46px;margin-top:-23px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#FFE08A,#E0A526 60%,#B57A12);border:2px solid #7A4E0A;display:grid;place-items:center;font-weight:800;color:#6B430A;font-size:20px;box-shadow:0 6px 14px rgba(0,0,0,.35)}
+.ch-goal{position:absolute;right:-6px;top:-62px;width:76px;pointer-events:none}
+.ch-marks{display:flex;justify-content:space-between;margin-top:12px;font-size:13px;font-weight:700;color:#8F857D;letter-spacing:.04em}
+.ch-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}
+.ch-stats div{background:#332B28;border:1px solid #463C38;border-radius:14px;padding:20px 22px}
+.ch-stats b{display:block;font-weight:800;font-size:clamp(22px,2.6vw,30px);line-height:1.1;white-space:nowrap}
+.ch-stats span{display:block;color:#B9AFA6;font-size:14px;margin-top:6px}
+.ch-cta{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:32px;padding-top:28px;border-top:1px solid rgba(255,255,255,.12)}
+.ch-cta p{font-weight:700;font-size:18px;max-width:560px}
+.ch-cta p span{color:var(--coral)}
+@keyframes ch-run{to{background-position:40px 0}}
+.anim .rv-in{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.anim .rv-in.on{opacity:1;transform:none}
+
+/* bitrix form tune-up */
+.form-card .b24-form-wrapper{background:transparent!important;box-shadow:none!important;border:0!important;font-family:Manrope,system-ui,sans-serif!important}
+.form-card .b24-form-header{display:none!important}
+.form-card .b24-form-btn{background:var(--red)!important;border-radius:999px!important;font-family:Manrope,sans-serif!important;font-weight:700!important}
+.form-card .b24-form-btn:hover{background:var(--red-deep)!important}
+.form-card .b24-form-control{border-radius:12px!important;font-family:Manrope,sans-serif!important;background:#fff!important;border:1.5px solid var(--line)!important;transition:border-color .2s}
+.form-card .b24-form-control:focus{border-color:var(--red)!important}
+.form-card .b24-form-control-container .b24-form-control-label{font-family:Manrope,sans-serif!important}
+
+/* responsive */
+@media (max-width:1080px){
+  .nav{display:none}
+  .phone{display:none}
+  .help{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .rv-track{grid-auto-columns:calc((100% - 18px)/2)}
+}
+@media (max-width:900px){
+  html{scroll-padding-top:76px}
+  .hdr .wrap{height:66px}
+  .logo img{height:28px}
+  .hdr .btn,.hdr .tg{display:none}
+  .burger{display:grid}
+  .mnav{display:block;position:fixed;inset:66px 0 auto 0;background:var(--bg);border-bottom:1.5px solid var(--edge);padding:12px 24px 28px;transform:translateY(-8px);opacity:0;visibility:hidden;transition:.2s}
+  .menu-open .mnav{transform:none;opacity:1;visibility:visible}
+  .mnav a{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-bottom:1px solid var(--line);font-weight:700;font-size:20px}
+  .mnav a .dia{width:8px;height:8px}
+  .mnav .btn{margin-top:22px;width:100%}
+  .mnav .m-phone{display:block;text-align:center;margin-top:16px;font-weight:700;border:0}
+  .hero{padding:32px 0 10px}
+  .hero .wrap{grid-template-columns:1fr;gap:44px}
+  .hero-art{justify-self:center;max-width:420px}
+  .ticket{left:-8px}
+  .st-a{right:-6px;width:96px}
+  .block{padding:76px 0}
+  .sec-head{flex-direction:column;align-items:flex-start;gap:16px;margin-bottom:32px}
+  .stats{grid-template-columns:1fr}
+  .plans{grid-template-columns:1fr}
+  .plan.dark{transform:none}
+  .extra{grid-template-columns:1fr;gap:12px}
+  .formsec .wrap,.faq .wrap{grid-template-columns:1fr;gap:32px}
+  .form-intro,.faq-side{position:static}
+  .faq-side img{display:none}
+  .stat-dark .emo{width:60px;right:16px;bottom:14px}
+  .hand{width:110px;margin:24px 0 0 auto}
+  .c-card .emo{width:60px;right:30px;top:28px}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .why:nth-child(3n){border-right:1px solid var(--line)}
+  .why:nth-child(2n){border-right:0}
+  .why:nth-last-child(-n+3){border-bottom:1px solid var(--line)}
+  .why:nth-last-child(-n+2){border-bottom:0}
+  .c-card{grid-template-columns:1fr;padding:40px 28px}
+  .nego{grid-template-columns:1fr}
+  .ch-card{padding:44px 26px 32px}
+  .ch-head{flex-direction:column;align-items:flex-start;gap:16px;margin-bottom:30px}
+  .nego-text{padding:28px 24px 32px}
+  .block.contacts{padding:56px 0 10px}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .btn{white-space:normal;text-align:center;line-height:1.25;padding-block:12px}
+  .hero-cta .btn{width:100%}
+  .help,.steps{grid-template-columns:1fr}
+  .help-item{min-height:0}
+  .stat-dark{grid-template-columns:1fr;padding:28px}
+  .why-grid{grid-template-columns:1fr}
+  .why{border-right:0!important;border-bottom:1px solid var(--line)!important}
+  .why:last-child{border-bottom:0!important}
+  .rv-track{grid-auto-columns:88%}
+  .smoothie{grid-template-columns:1fr;text-align:center;justify-items:center;padding:28px 22px}
+  .smoothie img{width:100%;height:auto;aspect-ratio:1}
+  .plan{padding:24px}
+  .ticket{max-width:210px;padding:12px 16px}
+  .ticket strong{font-size:17px}
+  .form-card{padding:10px}
+  .form-card .st{right:-8px;width:70px}
+  .c-card{padding:34px 22px 34px 22px}
+  .c-card::after{width:10px;background-size:10px 10px}
+  .ch-card{padding:40px 18px 28px}
+  .ch-stats{grid-template-columns:1fr}
+  .ch-marks span:nth-child(2),.ch-marks span:nth-child(4){display:none}
+  .ch-goal{width:58px;top:-50px}
+  .ch-cta .btn{width:100%}
+  .nego-text .btn{align-self:stretch}
+}
+@media (prefers-reduced-motion:reduce){
+  .ch-fill{animation:none;transition:none}
+  html{scroll-behavior:auto}
+  .marquee-track{animation:none}
+  .anim .rv-in{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr" id="top">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="5offer — на главную"><img src="assets/logo-5offer.png" alt="5OFFER" width="200" height="34"></a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#tarif">Тарифы</a>
+      <a href="#4steps">4 шага</a>
+      <a href="#feedback">Отзывы</a>
+      <a href="#challenge">Копилка</a>
+    </nav>
+    <div class="hdr-right">
+      <a class="phone" href="tel:+79014907823">+7 (901) 490-78-23</a>
+      <a class="tg" href="https://t.me/it5offer" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.4 3.6 2.9 10.8c-1 .4-1 1.6 0 1.9l4.6 1.5 1.8 5.6c.2.7 1.1.9 1.6.4l2.6-2.4 4.7 3.5c.6.4 1.4.1 1.6-.6L22.9 5c.2-1-.6-1.8-1.5-1.4ZM9.6 14.3l-.4 3.7-1.4-4.4 9.5-6.1-7.7 6.8Z"/></svg></a>
+      <a class="btn btn-red" href="#form">Консультация</a>
+      <button class="burger" type="button" aria-label="Меню" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+  <div class="mnav">
+    <a href="#tarif">Тарифы <i class="dia"></i></a>
+    <a href="#4steps">4 шага <i class="dia"></i></a>
+    <a href="#feedback">Отзывы <i class="dia"></i></a>
+    <a href="#challenge">Копилка <i class="dia"></i></a>
+    <a href="https://t.me/it5offer" target="_blank" rel="noopener">Telegram <i class="dia"></i></a>
+    <a class="btn btn-red" href="#form">Консультация</a>
+    <a class="m-phone" href="tel:+79014907823">Тел.: +7 (901) 490-78-23</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Специализация — трудовое право</span>
+      <h1>Трудовые <em>юристы</em> для IT и digital специалистов</h1>
+      <p class="lead"><b>Фиксированный пакет услуг от трудового юриста.</b> Никаких платежей за каждое письмо или звонок. Работаем до результата.</p>
+      <div class="hero-cta">
+        <a class="btn btn-red" href="#form">Хочу получить компенсацию
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></a>
+        <a class="btn btn-ghost" href="#form">Хочу остаться на рабочем месте
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg></a>
+      </div>
+      <p class="exp"><b>Опыт работы:</b> Т‑Банк, Альфа‑Банк, Сбер, Иннотех, Wildberries, Авито, а также стартапы и средние компании.</p>
+    </div>
+    <div class="hero-art">
+      <img class="st st-b" src="assets/stars-harlequin.png" alt="" data-par="-0.06">
+      <div class="frame"><img src="assets/hero-call.jpg" alt="Видеозвонок: HR, CEO и тимлид в колпаках шутов давят на сотрудника, рядом — юрист" width="1000" height="1250"></div>
+      <img class="st st-a" src="assets/star-burst.png" alt="" data-par="0.08">
+      <div class="ticket"><small>Если на работе цирк</small><strong>Компенсация <span>4–5 окладов</span> или сохраним работу</strong></div>
+    </div>
+  </div>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Убираем «негативную статью»</span><span>Возвращаем зарплату и премии</span><span>Прекращаем переработки</span><span>Снимаем давление работодателя</span><span>Защищаем от претензий за посты</span><span>Компенсация 4–5 окладов</span>
+      <span>Убираем «негативную статью»</span><span>Возвращаем зарплату и премии</span><span>Прекращаем переработки</span><span>Снимаем давление работодателя</span><span>Защищаем от претензий за посты</span><span>Компенсация 4–5 окладов</span>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head rv-in">
+      <div><span class="eyebrow">С чем мы поможем</span><h2 class="h2">Разруливаем,<br>когда на работе цирк<img class="emo-i" src="assets/emoji/jester-sad.webp" alt=""></h2></div>
+      <p class="lead">Знаем все схемы и трюки крупных компаний и умеем их обходить.</p>
+    </div>
+    <div class="help">
+      <div class="help-item rv-in"><div class="num">01/ <i class="dia"></i></div><p>Убираем «негативную статью» из трудовой</p></div>
+      <div class="help-item rv-in"><div class="num">02/ <i class="dia"></i></div><p>При увольнении сохраним работу или обеспечим компенсацию 4−5 окладов</p></div>
+      <div class="help-item rv-in"><div class="num">03/ <i class="dia"></i></div><p>Возвращаем невыплаченную зарплату и премии</p></div>
+      <div class="help-item rv-in"><div class="num">04/ <i class="dia"></i></div><p>Снимаем давление от работодателя</p></div>
+      <div class="help-item rv-in"><div class="num">05/ <i class="dia"></i></div><p>Прекращаем переработки и выполнение чужих задач</p></div>
+      <div class="help-item rv-in"><div class="num">06/ <i class="dia"></i></div><p>Защищаем от претензий за посты, отзывы в соцсетях и «накрутку опыта»</p></div>
+    </div>
+    <div class="stats">
+      <div class="stat-dark rv-in">
+        <img class="emo" src="assets/emoji/stars-gold.webp" alt="" loading="lazy">
+        <div><div class="big"><span data-count="650">650</span>+</div><p>кейсов закрыты успешно</p></div>
+        <div><div class="big coral"><span data-count="80450000">80 450 000</span> ₽</div><p>уже получили наши клиенты от работодателей</p></div>
+        <div class="full"><i class="dia"></i>Клиенты — от джунов до директоров</div>
+      </div>
+      <div class="stat-photo rv-in">
+        <img src="assets/exit-win.jpg" alt="Довольный клиент с юристом выходит из офиса с конвертом, а за стеклянной дверью грустят HR в колпаках шутов" width="1100" height="688" loading="lazy">
+        <span class="tag"><i class="dia"></i>Результат на бумаге</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="challenge" data-goal="20000000" data-current="0" data-deadline="2027-01-01T00:00:00+03:00">
+  <div class="wrap">
+    <div class="ch-card rv-in">
+      <div class="ch-head">
+        <div><span class="eyebrow">Челлендж до Нового года</span><h2 class="h2">Копилка<br>на 20 миллионов</h2></div>
+        <p class="lead">Складываем все суммы, которые наши клиенты получают от работодателей. Цель — 20 000 000 ₽ до 1 января 2027 года.</p>
+      </div>
+      <div class="ch-amount"><b><span data-ch="current">0</span> ₽</b><span>из 20 000 000 ₽</span></div>
+      <div class="ch-bar" role="progressbar" aria-label="Собрано в копилку" aria-valuemin="0" aria-valuemax="20000000" aria-valuenow="0">
+        <img class="ch-goal" src="assets/emoji/stars-gold.webp" alt="" loading="lazy">
+        <div class="ch-fill"><span class="ch-coin"></span></div>
+      </div>
+      <div class="ch-marks" aria-hidden="true"><span>0</span><span>5 млн</span><span>10 млн</span><span>15 млн</span><span>20 млн</span></div>
+      <div class="ch-stats">
+        <div><b data-ch="pct">0%</b><span>цели уже собрано</span></div>
+        <div><b data-ch="left">20 000 000 ₽</b><span>осталось собрать</span></div>
+        <div><b data-ch="days">—</b><span data-ch="days-label">до Нового года</span></div>
+      </div>
+      <div class="ch-cta">
+        <p>Каждая выплата клиенту — в копилку. <span>Ваша компенсация тоже может туда попасть.</span></p>
+        <a class="btn btn-red" href="#form">Хочу получить компенсацию →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block tariffs" id="tarif">
+  <div class="wrap">
+    <div class="sec-head rv-in">
+      <div><span class="eyebrow">Тарифы и услуги</span><h2 class="h2">Фиксированная цена.<br>Процент — за результат</h2></div>
+      <p class="lead">Тариф можно поменять в процессе, если ситуация изменится.</p>
+    </div>
+    <div class="plans">
+      <article class="plan rv-in">
+        <div class="plan-top"><div><h3>Standart</h3><p class="sub">Стандартный режим</p></div></div>
+        <ul>
+          <li><i class="dia"></i>Сопровождение в стандартном режиме</li>
+        </ul>
+        <div class="price">
+          <span class="pill">19 999 ₽</span>
+          <div class="pct"><small>При успешном исходе:</small><b>+15%</b> от выплаты компенсации</div>
+          <a class="btn btn-ghost" href="#form">Выбрать Standart</a>
+        </div>
+      </article>
+      <article class="plan dark rv-in">
+        <img class="emo" src="assets/emoji/heart-alert.webp" alt="" loading="lazy">
+        <div class="plan-top"><div><h3>Priority</h3><p class="sub">Для острых ситуаций</p></div><span class="badge">Быстро</span></div>
+        <ul>
+          <li><i class="dia"></i>Приоритетные ответы юриста</li>
+          <li><i class="dia"></i>Дежурный юрист 24/7</li>
+        </ul>
+        <p class="fit">Актуальный тариф, если работодатель действует быстро</p>
+        <div class="price">
+          <span class="pill">34 999 ₽</span>
+          <div class="pct"><small>При успешном исходе:</small><b>+15%</b> от выплаты компенсации</div>
+          <a class="btn btn-red" href="#form">Выбрать Priority</a>
+        </div>
+      </article>
+      <article class="plan rv-in">
+        <div class="plan-top"><div><h3>Inside</h3><p class="sub">Дополняет Standart или Priority</p></div><span class="badge">Лично</span></div>
+        <ul>
+          <li><i class="dia"></i>Юрист может подключаться к звонкам и вести переговоры лично</li>
+          <li class="or">ИЛИ</li>
+          <li><i class="dia"></i>Скрытый формат: юрист слушает и подсказывает в реальном времени</li>
+        </ul>
+        <p class="fit">Актуальный тариф, если вы не хотите оставаться один на один с работодателем — юрист присутствует и защищает ваши интересы лично</p>
+        <div class="price">
+          <span class="pill">19 999 ₽</span>
+          <div class="pct"><small>При успешном исходе:</small><b>18%</b> от суммы до 400 000 ₽<br><b>22%</b> от суммы свыше 400 000 ₽</div>
+          <a class="btn btn-ghost" href="#form">Выбрать Inside</a>
+        </div>
+      </article>
+    </div>
+    <div class="extra rv-in">
+      <h3>Закрываем все вопросы с работодателем</h3>
+      <p>Сопроводим судебный спор, признаем отношения трудовыми, когда работодатель скрывает трудовой договор под договором ГПХ, проверим или составим трудовой договор, проведем кадровый аудит.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block formsec" id="form">
+  <div class="wrap">
+    <div class="form-intro rv-in">
+      <span class="eyebrow">Консультация</span>
+      <h2 class="h2">С этого шага вы не одни</h2>
+      <p class="lead">После отправки наш дежурный юрист свяжется с вами и задаст уточняющие вопросы.</p>
+      <ul class="form-steps">
+        <li><i class="dia"></i><div>Включаемся мгновенно <span>— срочные кейсы берём в тот же день</span></div></li>
+        <li><i class="dia"></i><div>Работаем каждый день <span>— с 9 до 21</span></div></li>
+        <li><i class="dia"></i><div>Удобнее в мессенджере? <span>— <a href="https://t.me/it5offer" target="_blank" rel="noopener" style="color:var(--red);font-weight:700">напишите в Telegram</a></span></div></li>
+      </ul>
+      <img class="hand" src="assets/emoji/hand-pen.webp" alt="Клоунская рука с ручкой" loading="lazy">
+    </div>
+    <div class="form-card rv-in">
+      <img class="st" src="assets/star-burst.png" alt="">
+      <script data-b24-form="inline/4/pjszcj" data-skip-moving="true">
+      (function(w,d,u){
+      var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
+      var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+      })(window,document,'https://cdn-ru.bitrix24.ru/b36766646/crm/form/loader_4.js');
+      </script>
+      <noscript><p class="form-fallback">Чтобы отправить заявку, включите JavaScript или позвоните: <a href="tel:+79014907823">+7 (901) 490-78-23</a></p></noscript>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="why">
+  <div class="wrap">
+    <div class="sec-head rv-in">
+      <div><span class="eyebrow">Почему нас выбирают специалисты</span><h2 class="h2">Серьёзная работа<br>без лишнего цирка</h2></div>
+      <p class="lead">Специализация — трудовое право. Только оно, каждый день.</p>
+    </div>
+    <div class="why-grid rv-in">
+      <div class="why"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h1M14 10h1M9 14h1M14 14h1"/></svg></div><h3>Знаем бизнес изнутри</h3><p>Понимаем, как работают компании в разных сферах: стартапы, заводы, офисы</p></div>
+      <div class="why"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div><h3>Выходим в офис</h3><p>Если надо, приезжаем и решаем вопрос на месте</p></div>
+      <div class="why"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg></div><h3>Включаемся мгновенно</h3><p>Срочные кейсы берём в тот же день</p></div>
+      <div class="why"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.8 7L4 20l1.1-4.6A8 8 0 1 1 21 12Z"/></svg></div><h3>Берём переговоры на себя</h3><p>Онлайн или лично, вы не тратите нервы</p></div>
+      <div class="why"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21V3h6a4 4 0 0 1 0 8H5M5 15h9"/></svg></div><h3>Берём деньги за результат</h3><p>Риски на нас, у вас всегда чистая выгода</p></div>
+      <div class="why"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6.5 6.5 0 0 1 3.5 6"/></svg></div><h3>Команда под ваш случай</h3><p>Юрист + профильный эксперт, если дело требует специальных знаний</p></div>
+    </div>
+    <div class="nego rv-in">
+      <img src="assets/meeting.jpg" alt="Юрист кладёт на стол папку документов, HR в колпаках шутов нервничают" width="1100" height="733" loading="lazy">
+      <div class="nego-text">
+        <span class="eyebrow">Тариф Inside</span>
+        <h3>Юрист может выходить на переговоры лично</h3>
+        <p>Онлайн или в офисе — вы не остаётесь один на один с работодателем. Разберём ситуацию и предложим стратегию <span>на первой консультации</span>.</p>
+        <a class="btn btn-red" href="#form">Записаться на консультацию →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block tariffs" id="4steps">
+  <div class="wrap">
+    <div class="sec-head rv-in">
+      <div><span class="eyebrow">Как мы работаем</span><h2 class="h2">4 шага, чтобы<br>отстоять ваши права</h2></div>
+    </div>
+    <div class="steps">
+      <div class="step rv-in"><img class="emo" src="assets/emoji/clown-tear.webp" alt="" loading="lazy"><div class="n">01</div><h3>Консультация с юристом</h3><p>Вы делитесь ситуацией, юрист сразу выстраивает стратегию.</p><p class="aside">Всё серьёзное — на нас</p></div>
+      <div class="step rv-in"><div class="n">02</div><h3>Подготовка позиции</h3><p>Мы составляем документы, прописываем скрипт переговоров и продумываем тактику.</p><p class="aside">А вы в это время пьёте смузи</p></div>
+      <div class="step rv-in"><div class="n">03</div><h3>Переговоры за вас</h3><p>Юрист может выходить на разговор с работодателем онлайн или лично.</p><p class="aside">Вы можете параллельно работать, а не спорить о «невыполнимых дедлайнах»</p></div>
+      <div class="step final rv-in"><img class="emo" src="assets/emoji/clown-red.webp" alt="" loading="lazy"><div class="n">04</div><h3>Финал без стресса</h3><p>Подписывается соглашение с выплатой или продолжаете работать.</p><p class="aside">Вы просто ставите подпись — всё остальное сделали мы</p></div>
+    </div>
+    <div class="smoothie rv-in">
+      <img src="assets/smoothie-sofa.jpg" alt="Клиент отдыхает на диване со смузи, пока юрист разговаривает с HR" width="640" height="640" loading="lazy">
+      <p>А вы в это время пьёте смузи<span>и спокойно наблюдаете, как мы делаем всю работу за вас</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="feedback">
+  <div class="wrap">
+    <div class="sec-head rv-in">
+      <div><span class="eyebrow">Отзывы</span><h2 class="h2">Опыт работы с нами<img class="emo-i" src="assets/emoji/heart-candy.webp" alt="" loading="lazy"></h2></div>
+      <div class="rv-nav">
+        <button type="button" data-dir="-1" aria-label="Предыдущий отзыв"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+        <button type="button" data-dir="1" aria-label="Следующий отзыв"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+    <div class="rv-track" tabindex="0" aria-label="Отзывы клиентов">
+      <article class="rv">
+        <div class="q">“</div>
+        <p>Обратился к Павлу после того как на работе мне сказали, что будут пытаться меня уволить без окладов. У Павла свой пул юристов, мне попался Ростислав — человек близкий мне по духу, он помогал мне разруливать все дальнейшие дела с работодателем в дальнейшем, в т. ч. пришёл со мной офис и вёл переговоры как мой официальный представитель.</p>
+        <p>Как итог — 2.5 месяцев чилла и 3 выходных оклада. Всем рекомендую.</p>
+        <span class="res"><i class="dia"></i>2.5 месяца отдыха + 3 оклада</span>
+      </article>
+      <article class="rv">
+        <div class="q">“</div>
+        <p>Хочу оставить отличный отзыв на Павла и Михаила/ Возникла ситуация что меня хотели уволить к концу испытательного срока, по совету обратился к юристу и не прогадал, он был со мной на связи во время всех встреч с тимлидом и hr и консультировал в прямом эфире. На первых переговорах предлагали написать псж и не смогли выдвинуть каких-либо внятных претензий, обещали дать их на бумаге, но по итогу на след день предложили 2 оклада.</p>
+        <p>Без Михаила бы точно не довел дело до конца, был страх перед увольнением, но после такого понял, что ничего страшного нет и главное просто отстаивать свои реальные права)</p>
+        <p>Ещё раз спасибо за помощь</p>
+        <span class="res"><i class="dia"></i>Увольнение с ИС, 2 оклада</span>
+      </article>
+      <article class="rv">
+        <div class="q">“</div>
+        <p>Очень помогли мне при увольнении. Работодатель жестко на меня давил и доводил, и если бы не квалифицированная помощь юриста, я бы загнулась, честное слово.</p>
+        <p>Всегда приятно, когда есть опытные специалисты, на которых можешь опереться в ситуации, которую не вывозишь сам. Без них я бы не смогла отстоять свои права и получила бы гораздо меньше отступных. Очень благодарна за помощь, буду обращаться снова 💙</p>
+        <span class="res"><i class="dia"></i>Давление от работодателя</span>
+      </article>
+    </div>
+    <div class="rv-more"><a class="btn btn-ghost" href="https://t.me/pavel_terek_reviews" target="_blank" rel="noopener">Больше отзывов в нашем Telegram-канале →</a></div>
+  </div>
+</section>
+
+<section class="block faq tariffs" id="faq">
+  <div class="wrap">
+    <div class="faq-side rv-in">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="h2">Частые вопросы</h2>
+      <img src="assets/emoji/jester-orange.webp" alt="" loading="lazy">
+    </div>
+    <div class="faq-list">
+      <details class="rv-in"><summary>Могут ли меня уволить одним днём?<i class="pm"></i></summary><div class="ans"><p>Нет. Работодатель не может просто «завтра не приходи». Есть процедура, и мы её знаем лучше них.</p></div></details>
+      <details class="rv-in"><summary>Могут ли меня уволить просто так?<i class="pm"></i></summary><div class="ans"><p>Тоже нет. Для увольнения нужны основания. Мы подключаемся и разбираем их «аргументы» так, что они перестают работать.</p></div></details>
+      <details class="rv-in"><summary>Сколько времени займёт решение моего вопроса?<i class="pm"></i></summary><div class="ans"><p>Бывает достаточно пары встреч, иногда нужно чуть больше времени. Главное — мы ведём процесс от начала до конца и подключаемся сразу, если ситуация срочная.</p></div></details>
+      <details class="rv-in"><summary>Что будет на консультации?<i class="pm"></i></summary><div class="ans"><p>Вы рассказываете, что происходит. Мы задаём вопросы, оцениваем риски и сразу предлагаем стратегию. Никаких лишних «юридических лекций».</p></div></details>
+      <details class="rv-in"><summary>Как подготовиться к консультации?<i class="pm"></i></summary><div class="ans"><p>Лучше заранее вспомнить и собрать всё, что может быть важно: какие документы вы подписывали при устройстве и во время работы, какие были «странные моменты» от работодателя, какие условия вам предлагают сейчас. Чем больше деталей — тем быстрее мы выстроим защиту.</p></div></details>
+      <details class="rv-in"><summary>Какие есть тарифы и в чём разница? Можно ли поменять тариф?<i class="pm"></i></summary><div class="ans"><p><b>Standart</b> — сопровождение в стандартном режиме.</p><p><b>Priority</b> — приоритетные ответы, дежурный юрист 24/7. Этот тариф подходит для острых ситуаций, где важна скорость: работодатель быстро реагирует — и мы тоже.</p><p><b>Inside</b> — дополняет Standart или Priority. В этом формате юрист может лично выходить на переговоры или приезжать в офис. Это полная поддержка и максимальное вовлечение.</p><p>Тариф можно поменять в процессе, если ситуация изменится.</p></div></details>
+      <details class="rv-in"><summary>Какие документы подготовить для юриста?<i class="pm"></i></summary><div class="ans"><p>Трудовой договор, дополнительные соглашения, приказы, переписка с работодателем, предложения об изменении условий — всё, что связано с вашей работой. Мы сами отберём главное и используем это в стратегии.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="block contacts" id="contacts">
+  <div class="wrap">
+    <div class="c-card rv-in">
+      <div>
+        <span class="eyebrow">Остались вопросы?</span>
+        <img class="emo" src="assets/emoji/star-beige.webp" alt="" loading="lazy">
+        <h2 class="h2">Свяжитесь<br>с нами</h2>
+        <a class="btn btn-cream" href="#form" style="margin-top:30px">Записаться на консультацию →</a>
+      </div>
+      <div class="c-list">
+        <a class="big" href="tel:+79014907823">+7 (901) 490-78-23</a>
+        <a href="mailto:hello5offer@yandex.ru">hello5offer@yandex.ru</a>
+        <span>Работаем каждый день с 9 до 21</span>
+        <span class="muted">Москва, проезд М. Купавенский, 5к1</span>
+        <div class="socials">
+          <a href="https://www.youtube.com/@5offer-it-law" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.8 15.1V8.9L15.6 12l-5.8 3.1Z"/></svg></a>
+          <a href="https://t.me/it5offer" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.4 3.6 2.9 10.8c-1 .4-1 1.6 0 1.9l4.6 1.5 1.8 5.6c.2.7 1.1.9 1.6.4l2.6-2.4 4.7 3.5c.6.4 1.4.1 1.6-.6L22.9 5c.2-1-.6-1.8-1.5-1.4ZM9.6 14.3l-.4 3.7-1.4-4.4 9.5-6.1-7.7 6.8Z"/></svg></a>
+          <a href="https://www.tiktok.com/@5offer_official?_r=1&amp;_t=ZP-97oWnlrbVIO" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.4v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.1a6.3 6.3 0 1 0 5.4 6.3V8.7a7.7 7.7 0 0 0 4.4 1.4V6.7a4.4 4.4 0 0 1-4.4-4.7Z"/></svg></a>
+          <a href="https://www.instagram.com/kate_5offer/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <img src="assets/logo-5offer.png" alt="5OFFER" width="236" height="40">
+    <div class="site">5OFFER.RU</div>
+    <nav class="foot-links" aria-label="Документы и разделы">
+      <a href="#tarif">Тарифы</a>
+      <a href="#4steps">4 шага</a>
+      <a href="#feedback">Отзывы</a>
+      <a href="politics/">Политика конфиденциальности</a>
+      <a href="oferta/">Договор оферта</a>
+      <a href="https://www.instagram.com/kate_5offer/" target="_blank" rel="noopener">Instagram*</a>
+    </nav>
+    <p class="legal">Индивидуальный предприниматель Кузнецова Ирина Сергеевна · ОГРНИП 325774600298401</p>
+    <p class="legal">* Instagram принадлежит компании Meta, признанной экстремистской организацией и запрещённой в РФ.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var hdr=document.querySelector('.hdr'), burger=document.querySelector('.burger');
+  function onScroll(){hdr.classList.toggle('scrolled', scrollY>8);}
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  burger.addEventListener('click',function(){
+    var open=document.body.classList.toggle('menu-open');
+    burger.setAttribute('aria-expanded',open);
+  });
+  document.querySelectorAll('.mnav a').forEach(function(a){
+    a.addEventListener('click',function(){document.body.classList.remove('menu-open');burger.setAttribute('aria-expanded',false);});
+  });
+
+  // reviews carousel
+  var track=document.querySelector('.rv-track');
+  var rvNav=document.querySelector('.rv-nav');
+  function rvCheck(){rvNav.style.visibility=track.scrollWidth>track.clientWidth+2?'visible':'hidden';}
+  addEventListener('resize',rvCheck);rvCheck();
+  document.querySelectorAll('.rv-nav button').forEach(function(b){
+    b.addEventListener('click',function(){
+      var card=track.querySelector('.rv');
+      var step=card.getBoundingClientRect().width+18;
+      track.scrollBy({left:step*+b.dataset.dir,behavior:'smooth'});
+    });
+  });
+
+  // FAQ: one open at a time
+  var items=document.querySelectorAll('.faq details');
+  items.forEach(function(d){d.addEventListener('toggle',function(){if(d.open)items.forEach(function(o){if(o!==d)o.open=false;});});});
+
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function fmt(n){return n.toLocaleString('ru-RU').replace(/[  ]/g,' ');}
+
+  // challenge piggy bank: edit data-current on #challenge to update the amount
+  var ch=document.getElementById('challenge');
+  if(ch){
+    var goal=+ch.dataset.goal, cur=Math.max(0,+ch.dataset.current||0), q=function(s){return ch.querySelector('[data-ch="'+s+'"]');};
+    var pct=Math.min(100,cur/goal*100);
+    ch.style.setProperty('--p',pct.toFixed(2)+'%');
+    ch.querySelector('.ch-bar').setAttribute('aria-valuenow',cur);
+    var curEl=q('current'); curEl.textContent=fmt(cur); if(cur>0) curEl.dataset.count=cur;
+    q('pct').textContent=(pct>0&&pct<1?pct.toFixed(1):Math.floor(pct))+'%';
+    q('left').textContent=fmt(Math.max(0,goal-cur))+' ₽';
+    var days=Math.ceil((new Date(ch.dataset.deadline)-new Date())/864e5);
+    var plural=function(n){var a=n%10,b=n%100;return a===1&&b!==11?'день':a>=2&&a<=4&&(b<10||b>=20)?'дня':'дней';};
+    if(days>0){q('days').textContent=days+' '+plural(days);}
+    else{q('days').textContent=cur>=goal?'Цель взята!':'Финиш';q('days-label').textContent='челлендж завершён';}
+  }
+
+  // reveal on scroll + count-up
+  function count(el){
+    var to=+el.dataset.count, t0=null, dur=1400;
+    function tick(t){t0=t0||t;var p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3);el.textContent=fmt(Math.round(to*e));if(p<1)requestAnimationFrame(tick);}
+    requestAnimationFrame(tick);
+  }
+  if('IntersectionObserver' in window && !reduce){
+    document.documentElement.classList.add('anim');
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      e.target.classList.add('on');
+      e.target.querySelectorAll('[data-count]').forEach(count);
+      io.unobserve(e.target);
+    });},{threshold:.12});
+    document.querySelectorAll('.rv-in').forEach(function(el){io.observe(el);});
+  } else {
+    document.querySelectorAll('.rv-in').forEach(function(el){el.classList.add('on');});
+  }
+
+  // gentle parallax on hero stars
+  if(!reduce){
+    var stars=document.querySelectorAll('[data-par]');
+    addEventListener('scroll',function(){
+      var y=scrollY; if(y>900)return;
+      stars.forEach(function(s){s.style.translate='0 '+(y*+s.dataset.par)+'px';s.style.rotate=(y*+s.dataset.par*.4)+'deg';});
+    },{passive:true});
+  }
+})();
+</script>
+
+<script>
+// уведомление о заявке в Telegram: поля запоминаем при отправке, шлём после ответа Битрикса
+(function(){
+  var last=null;
+  function collect(form){
+    return form.getFields().filter(function(f){return f.label&&f.type!=='layout'&&f.type!=='agreement';}).map(function(f){
+      var v=f.type==='list'&&f.selectedItems?f.selectedItems().map(function(i){return i.label;}):f.values();
+      return {label:f.label,value:v.join(', ')};
+    });
+  }
+  addEventListener('b24:form:submit',function(e){
+    try{last=collect(e.detail.object);}catch(err){last=null;}
+  });
+  addEventListener('b24:form:send:success',function(){
+    if(!last)return;
+    var body=JSON.stringify({fields:last,page:location.href});last=null;
+    fetch('/notify/send.php',{method:'POST',headers:{'Content-Type':'application/json'},body:body,keepalive:true}).catch(function(){});
+  });
+})();
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script>
+if(/(^|\.)5offer\.ru$/.test(location.hostname))setTimeout(function(){(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");window.mainMetrikaId='107136073';ym(window.mainMetrikaId,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true,ecommerce:"dataLayer"});},2000);
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/107136073" style="position:absolute;left:-9999px" alt=""></div></noscript>
+</body>
+</html>

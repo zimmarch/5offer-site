@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Страница не найдена — 5offer</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F2EEE6;--paper:#FBF9F4;--ink:#231F1D;--ink-2:#2B2523;--ink-soft:#4A423E;--edge:#3A3330;--red:#B3202A;--red-deep:#8E1820}
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;display:flex;flex-direction:column;background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,-apple-system,Segoe UI,sans-serif;-webkit-font-smoothing:antialiased}
+.hdr{padding:20px 24px}
+.hdr img{height:32px;width:auto;display:block}
+main{flex:1;display:grid;place-items:center;padding:24px 16px 64px}
+.card{position:relative;max-width:560px;width:100%;background:var(--paper);border:1.5px solid var(--edge);border-radius:24px;padding:48px 36px 40px;text-align:center;box-shadow:0 22px 44px -26px rgba(70,45,30,.38)}
+.card::before{content:"";position:absolute;left:0;right:0;top:0;height:10px;border-radius:24px 24px 0 0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Cpath d='M5 0 10 5 5 10 0 5Z' fill='%23B3202A'/%3E%3C/svg%3E") 0 0/10px 10px repeat-x,var(--ink-2)}
+.clown{width:120px;margin:0 auto 10px;transform:rotate(-6deg)}
+.code{font-weight:800;font-size:clamp(64px,14vw,110px);line-height:1;letter-spacing:-.04em;color:var(--red)}
+h1{margin-top:10px;font-weight:800;font-size:clamp(22px,4vw,30px);line-height:1.15;text-transform:uppercase}
+p{margin-top:14px;color:var(--ink-soft);font-size:17px;line-height:1.55}
+.btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-deep)}
+.btn-ghost{border:1.5px solid var(--edge);color:var(--ink);background:var(--paper)}
+@media (max-width:520px){.card{padding:40px 20px 30px}.btn{width:100%}}
+</style>
+</head>
+<body>
+<header class="hdr"><a href="/" aria-label="5offer — на главную"><img src="/assets/logo-5offer.png" alt="5OFFER" width="190" height="32"></a></header>
+<main>
+  <div class="card">
+    <img class="clown" src="/assets/emoji/jester-sad.webp" alt="">
+    <div class="code">404</div>
+    <h1>Тут цирк уехал</h1>
+    <p>Такой страницы нет. Зато юристы на месте — вернитесь на главную или сразу запишитесь на консультацию.</p>
+    <div class="btns">
+      <a class="btn btn-red" href="/#form">Записаться на консультацию</a>
+      <a class="btn btn-ghost" href="/">На главную</a>
+    </div>
+  </div>
+</main>
+</body>
+</html>
