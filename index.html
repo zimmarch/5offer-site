@@ -775,26 +775,43 @@ section{position:relative}
 
   function fmt(n){return n.toLocaleString('ru-RU').replace(/[  ]/g,' ');}
 
-  // challenge piggy bank: edit data-current on #challenge to update the amount
+  // challenge piggy bank: the amount lives in challenge.json (the Telegram bot updates it),
+  // data-current on #challenge is the fallback until it loads
   var ch=document.getElementById('challenge');
   if(ch){
-    var goal=+ch.dataset.goal, cur=Math.max(0,+ch.dataset.current||0), q=function(s){return ch.querySelector('[data-ch="'+s+'"]');};
-    var pct=Math.min(100,cur/goal*100);
-    ch.style.setProperty('--p',pct.toFixed(2)+'%');
-    ch.querySelector('.ch-bar').setAttribute('aria-valuenow',cur);
-    var curEl=q('current'); curEl.textContent=fmt(cur); if(cur>0) curEl.dataset.count=cur;
-    q('pct').textContent=(pct>0&&pct<1?pct.toFixed(1):Math.floor(pct))+'%';
-    q('left').textContent=fmt(Math.max(0,goal-cur))+' ₽';
-    var days=Math.ceil((new Date(ch.dataset.deadline)-new Date())/864e5);
+    var goal=+ch.dataset.goal, q=function(s){return ch.querySelector('[data-ch="'+s+'"]');}, shown=null;
     var plural=function(n){var a=n%10,b=n%100;return a===1&&b!==11?'день':a>=2&&a<=4&&(b<10||b>=20)?'дня':'дней';};
-    if(days>0){q('days').textContent=days+' '+plural(days);}
-    else{q('days').textContent=cur>=goal?'Цель взята!':'Финиш';q('days-label').textContent='челлендж завершён';}
+    var renderCh=function(cur){
+      if(cur===shown)return;
+      shown=cur;
+      var pct=Math.min(100,cur/goal*100);
+      ch.style.setProperty('--p',pct.toFixed(2)+'%');
+      ch.querySelector('.ch-bar').setAttribute('aria-valuenow',cur);
+      var curEl=q('current'); curEl.textContent=fmt(cur); if(cur>0) curEl.dataset.count=cur;
+      q('pct').textContent=(pct>0&&pct<1?pct.toFixed(1):Math.floor(pct))+'%';
+      q('left').textContent=fmt(Math.max(0,goal-cur))+' ₽';
+      var days=Math.ceil((new Date(ch.dataset.deadline)-new Date())/864e5);
+      if(days>0){q('days').textContent=days+' '+plural(days);}
+      else{q('days').textContent=cur>=goal?'Цель взята!':'Финиш';q('days-label').textContent='челлендж завершён';}
+    };
+    var lastCh=0;
+    var loadCh=function(){
+      if(document.hidden||Date.now()-lastCh<30000)return;
+      lastCh=Date.now();
+      fetch('challenge.json?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(d){
+        if(d&&Number.isFinite(d.current)&&d.current>=0)renderCh(d.current);
+      }).catch(function(){});
+    };
+    renderCh(Math.max(0,+ch.dataset.current||0));
+    loadCh();
+    setInterval(loadCh,60000);
+    document.addEventListener('visibilitychange',loadCh);
   }
 
   // reveal on scroll + count-up
   function count(el){
-    var to=+el.dataset.count, t0=null, dur=1400;
-    function tick(t){t0=t0||t;var p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3);el.textContent=fmt(Math.round(to*e));if(p<1)requestAnimationFrame(tick);}
+    var t0=null, dur=1400;
+    function tick(t){t0=t0||t;var p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3);el.textContent=fmt(Math.round(+el.dataset.count*e));if(p<1)requestAnimationFrame(tick);}
     requestAnimationFrame(tick);
   }
   if('IntersectionObserver' in window && !reduce){
