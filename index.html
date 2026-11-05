@@ -172,18 +172,20 @@ section{position:relative}
 .extra p{color:var(--ink-soft)}
 .note{font-size:14px;color:var(--muted);margin-top:18px;text-align:center}
 
-/* form */
-.formsec{overflow-x:clip}
-.formsec .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
-.form-intro{position:sticky;top:110px}
-.form-intro .h2{margin-bottom:20px}
-.form-steps{list-style:none;margin-top:32px;display:flex;flex-direction:column;gap:16px}
-.form-steps li{display:flex;gap:14px;align-items:baseline;font-weight:600}
-.form-steps li span{color:var(--muted);font-weight:500}
-.form-card{background:var(--paper);border:1.5px solid var(--edge);border-radius:22px;box-shadow:var(--shadow);padding:20px;position:relative;min-height:420px}
-.form-card .st{width:86px;right:-26px;top:-38px}
-.form-fallback{color:var(--muted);font-size:14px;padding:12px}
-.form-fallback a{color:var(--red);font-weight:700}
+/* consult */
+.consult{overflow-x:clip}
+.consult .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+.consult-intro .h2{margin-bottom:20px}
+.consult-steps{list-style:none;margin-top:32px;display:flex;flex-direction:column;gap:16px}
+.consult-steps li{display:flex;gap:14px;align-items:baseline;font-weight:600}
+.consult-steps li span{color:var(--muted);font-weight:500}
+.tg-card{position:relative;display:flex;flex-direction:column;align-items:flex-start;background:var(--ink-2);color:var(--paper);border-radius:22px;box-shadow:var(--shadow);padding:40px;transition:transform .2s ease}
+.tg-card:hover{transform:translateY(-4px)}
+.tg-card .eyebrow{margin-bottom:10px;color:var(--coral)}
+.tg-card h3{font-weight:800;font-size:clamp(26px,2.8vw,34px);line-height:1.1;text-transform:uppercase}
+.tg-card p{margin-top:10px;color:#C9BFB6}
+.tg-handle{margin:14px 0 22px;font-weight:700;color:var(--coral)}
+.tg-card .st{width:86px;right:-26px;top:-38px}
 
 /* why */
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1.5px solid var(--edge);border-radius:var(--radius);overflow:hidden;background:var(--paper);box-shadow:var(--shadow)}
@@ -295,12 +297,18 @@ section{position:relative}
 .ch-amount{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 14px;margin-bottom:18px}
 .ch-amount b{font-weight:800;font-size:clamp(40px,6vw,76px);line-height:1;letter-spacing:-.03em;color:var(--coral);white-space:nowrap}
 .ch-amount > span{font-weight:700;font-size:clamp(17px,2vw,22px);color:#B9AFA6;white-space:nowrap}
-.ch-bar{position:relative;height:40px;border-radius:999px;background:#3A3230;border:1.5px solid #4A403C;padding:4px}
-.ch-fill{position:relative;height:100%;width:30px;border-radius:999px;background:repeating-linear-gradient(-45deg,var(--red) 0 14px,var(--paper) 14px 28px);background-size:40px 40px;animation:ch-run 1.6s linear infinite;transition:width 1.8s cubic-bezier(.2,.8,.2,1);box-shadow:inset 0 -6px 10px rgba(0,0,0,.18)}
-.ch-card.on .ch-fill,html:not(.anim) .ch-fill{width:max(30px,var(--p,0%))}
-.ch-coin{position:absolute;right:-12px;top:50%;width:46px;height:46px;margin-top:-23px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#FFE08A,#E0A526 60%,#B57A12);border:2px solid #7A4E0A;display:grid;place-items:center;font-weight:800;color:#6B430A;font-size:20px;box-shadow:0 6px 14px rgba(0,0,0,.35)}
+.ch-bar{--coin:46px;--fill-min:calc(var(--coin) / 2 - 5.5px);position:relative;height:40px;border-radius:999px;background:#3A3230;border:1.5px solid #4A403C;padding:4px}
+.ch-fill{position:relative;height:100%;width:var(--fill-min);border-radius:999px;background:repeating-linear-gradient(-45deg,var(--red) 0 14px,var(--paper) 14px 28px);background-size:40px 40px;animation:ch-run 1.6s linear infinite;transition:width 1.8s cubic-bezier(.2,.8,.2,1);box-shadow:inset 0 -6px 10px rgba(0,0,0,.18)}
+.ch-card.on .ch-fill,html:not(.anim) .ch-fill{width:max(var(--fill-min),var(--p,0%))}
+.ch-coin{position:absolute;right:calc(var(--coin) / -2);top:50%;width:var(--coin);height:var(--coin);margin-top:calc(var(--coin) / -2);border-radius:50%;background:radial-gradient(circle at 35% 30%,#FFE08A,#E0A526 60%,#B57A12);border:2px solid #7A4E0A;display:grid;place-items:center;font-weight:800;color:#6B430A;font-size:20px;box-shadow:0 6px 14px rgba(0,0,0,.35)}
 .ch-goal{position:absolute;right:-6px;top:-62px;width:76px;pointer-events:none}
-.ch-marks{display:flex;justify-content:space-between;margin-top:12px;font-size:13px;font-weight:700;color:#8F857D;letter-spacing:.04em}
+.ch-marks{position:relative;height:20px;margin:12px 5.5px 0;font-size:13px;font-weight:700;color:#8F857D;letter-spacing:.04em}
+.ch-marks span{position:absolute;top:0;white-space:nowrap;transform:translateX(-50%)}
+.ch-marks span:nth-child(1){left:0;transform:none}
+.ch-marks span:nth-child(2){left:25%}
+.ch-marks span:nth-child(3){left:50%}
+.ch-marks span:nth-child(4){left:75%}
+.ch-marks span:nth-child(5){right:0;transform:none}
 .ch-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}
 .ch-stats div{background:#332B28;border:1px solid #463C38;border-radius:14px;padding:20px 22px}
 .ch-stats b{display:block;font-weight:800;font-size:clamp(22px,2.6vw,30px);line-height:1.1;white-space:nowrap}
@@ -312,14 +320,6 @@ section{position:relative}
 .anim .rv-in{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
 .anim .rv-in.on{opacity:1;transform:none}
 
-/* bitrix form tune-up */
-.form-card .b24-form-wrapper{background:transparent!important;box-shadow:none!important;border:0!important;font-family:Manrope,system-ui,sans-serif!important}
-.form-card .b24-form-header{display:none!important}
-.form-card .b24-form-btn{background:var(--red)!important;border-radius:999px!important;font-family:Manrope,sans-serif!important;font-weight:700!important}
-.form-card .b24-form-btn:hover{background:var(--red-deep)!important}
-.form-card .b24-form-control{border-radius:12px!important;font-family:Manrope,sans-serif!important;background:#fff!important;border:1.5px solid var(--line)!important;transition:border-color .2s}
-.form-card .b24-form-control:focus{border-color:var(--red)!important}
-.form-card .b24-form-control-container .b24-form-control-label{font-family:Manrope,sans-serif!important}
 
 /* responsive */
 @media (max-width:1080px){
@@ -352,11 +352,12 @@ section{position:relative}
   .plans{grid-template-columns:1fr}
   .plan.dark{transform:none}
   .extra{grid-template-columns:1fr;gap:12px}
-  .formsec .wrap,.faq .wrap{grid-template-columns:1fr;gap:32px}
-  .form-intro,.faq-side{position:static}
+  .consult .wrap,.faq .wrap{grid-template-columns:1fr;gap:32px}
+  .faq-side{position:static}
   .faq-side img{display:none}
   .stat-dark .emo{width:60px;right:16px;bottom:14px}
   .hand{width:110px;margin:24px 0 0 auto}
+  .tg-card .st{display:none}
   .c-card .emo{width:60px;right:30px;top:28px}
   .why-grid{grid-template-columns:1fr 1fr}
   .why:nth-child(3n){border-right:1px solid var(--line)}
@@ -371,6 +372,8 @@ section{position:relative}
   .block.contacts{padding:56px 0 10px}
 }
 @media (max-width:620px){
+  .ch-bar{--coin:32px}
+  .tg-card{padding:26px 22px}
   body{font-size:16px}
   .wrap{padding:0 16px}
   .btn{white-space:normal;text-align:center;line-height:1.25;padding-block:12px}
@@ -387,8 +390,6 @@ section{position:relative}
   .plan{padding:24px}
   .ticket{max-width:210px;padding:12px 16px}
   .ticket strong{font-size:17px}
-  .form-card{padding:10px}
-  .form-card .st{right:-8px;width:70px}
   .c-card{padding:34px 22px 34px 22px}
   .c-card::after{width:10px;background-size:10px 10px}
   .ch-card{padding:40px 18px 28px}
@@ -416,11 +417,12 @@ section{position:relative}
       <a href="#4steps">4 шага</a>
       <a href="#feedback">Отзывы</a>
       <a href="#challenge">Копилка</a>
+      <a href="#consult">Запись</a>
     </nav>
     <div class="hdr-right">
       <a class="phone" href="tel:+79014907823">+7 (901) 490-78-23</a>
       <a class="tg" href="https://t.me/it5offer" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.4 3.6 2.9 10.8c-1 .4-1 1.6 0 1.9l4.6 1.5 1.8 5.6c.2.7 1.1.9 1.6.4l2.6-2.4 4.7 3.5c.6.4 1.4.1 1.6-.6L22.9 5c.2-1-.6-1.8-1.5-1.4ZM9.6 14.3l-.4 3.7-1.4-4.4 9.5-6.1-7.7 6.8Z"/></svg></a>
-      <a class="btn btn-red" href="#form">Консультация</a>
+      <a class="btn btn-red" href="#consult">Консультация</a>
       <button class="burger" type="button" aria-label="Меню" aria-expanded="false"><span></span></button>
     </div>
   </div>
@@ -429,8 +431,9 @@ section{position:relative}
     <a href="#4steps">4 шага <i class="dia"></i></a>
     <a href="#feedback">Отзывы <i class="dia"></i></a>
     <a href="#challenge">Копилка <i class="dia"></i></a>
+    <a href="#consult">Запись <i class="dia"></i></a>
     <a href="https://t.me/it5offer" target="_blank" rel="noopener">Telegram <i class="dia"></i></a>
-    <a class="btn btn-red" href="#form">Консультация</a>
+    <a class="btn btn-red" href="#consult">Консультация</a>
     <a class="m-phone" href="tel:+79014907823">Тел.: +7 (901) 490-78-23</a>
   </div>
 </header>
@@ -443,9 +446,9 @@ section{position:relative}
       <h1>Трудовые <em>юристы</em> для IT и digital специалистов</h1>
       <p class="lead"><b>Фиксированный пакет услуг от трудового юриста.</b> Никаких платежей за каждое письмо или звонок. Работаем до результата.</p>
       <div class="hero-cta">
-        <a class="btn btn-red" href="#form">Хочу получить компенсацию
+        <a class="btn btn-red" href="#consult">Хочу получить компенсацию
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></a>
-        <a class="btn btn-ghost" href="#form">Хочу остаться на рабочем месте
+        <a class="btn btn-ghost" href="#consult">Хочу остаться на рабочем месте
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg></a>
       </div>
       <p class="exp"><b>Опыт работы:</b> Т‑Банк, Альфа‑Банк, Сбер, Иннотех, Wildberries, Авито, а также стартапы и средние компании.</p>
@@ -494,27 +497,27 @@ section{position:relative}
   </div>
 </section>
 
-<section class="block" id="challenge" data-goal="20000000" data-current="0" data-deadline="2027-01-01T00:00:00+03:00">
+<section class="block" id="challenge" data-goal="20000000" data-current="1200000" data-deadline="2027-01-01T00:00:00+03:00">
   <div class="wrap">
     <div class="ch-card rv-in">
       <div class="ch-head">
         <div><span class="eyebrow">Челлендж до Нового года</span><h2 class="h2">Копилка<br>на 20 миллионов</h2></div>
         <p class="lead">Складываем все суммы, которые наши клиенты получают от работодателей. Цель — 20 000 000 ₽ до 1 января 2027 года.</p>
       </div>
-      <div class="ch-amount"><b><span data-ch="current">0</span> ₽</b><span>из 20 000 000 ₽</span></div>
+      <div class="ch-amount"><b><span data-ch="current">1 200 000</span> ₽</b><span>из 20 000 000 ₽</span></div>
       <div class="ch-bar" role="progressbar" aria-label="Собрано в копилку" aria-valuemin="0" aria-valuemax="20000000" aria-valuenow="0">
         <img class="ch-goal" src="assets/emoji/stars-gold.webp" alt="" loading="lazy">
         <div class="ch-fill"><span class="ch-coin"></span></div>
       </div>
       <div class="ch-marks" aria-hidden="true"><span>0</span><span>5 млн</span><span>10 млн</span><span>15 млн</span><span>20 млн</span></div>
       <div class="ch-stats">
-        <div><b data-ch="pct">0%</b><span>цели уже собрано</span></div>
-        <div><b data-ch="left">20 000 000 ₽</b><span>осталось собрать</span></div>
+        <div><b data-ch="pct">6%</b><span>цели уже собрано</span></div>
+        <div><b data-ch="left">18 800 000 ₽</b><span>осталось собрать</span></div>
         <div><b data-ch="days">—</b><span data-ch="days-label">до Нового года</span></div>
       </div>
       <div class="ch-cta">
         <p>Каждая выплата клиенту — в копилку. <span>Ваша компенсация тоже может туда попасть.</span></p>
-        <a class="btn btn-red" href="#form">Хочу получить компенсацию →</a>
+        <a class="btn btn-red" href="#consult">Хочу получить компенсацию →</a>
       </div>
     </div>
   </div>
@@ -535,7 +538,7 @@ section{position:relative}
         <div class="price">
           <span class="pill">19 999 ₽</span>
           <div class="pct"><small>При успешном исходе:</small><b>+15%</b> от выплаты компенсации</div>
-          <a class="btn btn-ghost" href="#form">Выбрать Standart</a>
+          <a class="btn btn-ghost" href="#consult">Выбрать Standart</a>
         </div>
       </article>
       <article class="plan dark rv-in">
@@ -549,7 +552,7 @@ section{position:relative}
         <div class="price">
           <span class="pill">34 999 ₽</span>
           <div class="pct"><small>При успешном исходе:</small><b>+15%</b> от выплаты компенсации</div>
-          <a class="btn btn-red" href="#form">Выбрать Priority</a>
+          <a class="btn btn-red" href="#consult">Выбрать Priority</a>
         </div>
       </article>
       <article class="plan rv-in">
@@ -563,7 +566,7 @@ section{position:relative}
         <div class="price">
           <span class="pill">19 999 ₽</span>
           <div class="pct"><small>При успешном исходе:</small><b>18%</b> от суммы до 400 000 ₽<br><b>22%</b> от суммы свыше 400 000 ₽</div>
-          <a class="btn btn-ghost" href="#form">Выбрать Inside</a>
+          <a class="btn btn-ghost" href="#consult">Выбрать Inside</a>
         </div>
       </article>
     </div>
@@ -574,29 +577,26 @@ section{position:relative}
   </div>
 </section>
 
-<section class="block formsec" id="form">
+<section class="block consult" id="consult">
   <div class="wrap">
-    <div class="form-intro rv-in">
+    <div class="consult-intro rv-in">
       <span class="eyebrow">Консультация</span>
       <h2 class="h2">С этого шага вы не одни</h2>
-      <p class="lead">После отправки наш дежурный юрист свяжется с вами и задаст уточняющие вопросы.</p>
-      <ul class="form-steps">
+      <p class="lead">Запишитесь на консультацию через нашего бота в Telegram.</p>
+      <ul class="consult-steps">
         <li><i class="dia"></i><div>Включаемся мгновенно <span>— срочные кейсы берём в тот же день</span></div></li>
         <li><i class="dia"></i><div>Работаем каждый день <span>— с 9 до 21</span></div></li>
-        <li><i class="dia"></i><div>Удобнее в мессенджере? <span>— <a href="https://t.me/it5offer" target="_blank" rel="noopener" style="color:var(--red);font-weight:700">напишите в Telegram</a></span></div></li>
       </ul>
       <img class="hand" src="assets/emoji/hand-pen.webp" alt="Клоунская рука с ручкой" loading="lazy">
     </div>
-    <div class="form-card rv-in">
+    <a class="tg-card rv-in" href="https://t.me/Fiveoffer_bot" target="_blank" rel="noopener">
       <img class="st" src="assets/star-burst.png" alt="">
-      <script data-b24-form="inline/4/pjszcj" data-skip-moving="true">
-      (function(w,d,u){
-      var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
-      var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-      })(window,document,'https://cdn-ru.bitrix24.ru/b36766646/crm/form/loader_4.js');
-      </script>
-      <noscript><p class="form-fallback">Чтобы отправить заявку, включите JavaScript или позвоните: <a href="tel:+79014907823">+7 (901) 490-78-23</a></p></noscript>
-    </div>
+      <span class="eyebrow">Запись на консультацию</span>
+      <h3>Бот 5offer</h3>
+      <p>Запишет вас на консультацию прямо в Telegram.</p>
+      <span class="tg-handle">@Fiveoffer_bot</span>
+      <span class="btn btn-red">Записаться через бота →</span>
+    </a>
   </div>
 </section>
 
@@ -620,7 +620,7 @@ section{position:relative}
         <span class="eyebrow">Тариф Inside</span>
         <h3>Юрист может выходить на переговоры лично</h3>
         <p>Онлайн или в офисе — вы не остаётесь один на один с работодателем. Разберём ситуацию и предложим стратегию <span>на первой консультации</span>.</p>
-        <a class="btn btn-red" href="#form">Записаться на консультацию →</a>
+        <a class="btn btn-red" href="#consult">Записаться на консультацию →</a>
       </div>
     </div>
   </div>
@@ -704,7 +704,7 @@ section{position:relative}
         <span class="eyebrow">Остались вопросы?</span>
         <img class="emo" src="assets/emoji/star-beige.webp" alt="" loading="lazy">
         <h2 class="h2">Свяжитесь<br>с нами</h2>
-        <a class="btn btn-cream" href="#form" style="margin-top:30px">Записаться на консультацию →</a>
+        <a class="btn btn-cream" href="#consult" style="margin-top:30px">Записаться на консультацию →</a>
       </div>
       <div class="c-list">
         <a class="big" href="tel:+79014907823">+7 (901) 490-78-23</a>
@@ -818,27 +818,6 @@ section{position:relative}
       stars.forEach(function(s){s.style.translate='0 '+(y*+s.dataset.par)+'px';s.style.rotate=(y*+s.dataset.par*.4)+'deg';});
     },{passive:true});
   }
-})();
-</script>
-
-<script>
-// уведомление о заявке в Telegram: поля запоминаем при отправке, шлём после ответа Битрикса
-(function(){
-  var last=null;
-  function collect(form){
-    return form.getFields().filter(function(f){return f.label&&f.type!=='layout'&&f.type!=='agreement';}).map(function(f){
-      var v=f.type==='list'&&f.selectedItems?f.selectedItems().map(function(i){return i.label;}):f.values();
-      return {label:f.label,value:v.join(', ')};
-    });
-  }
-  addEventListener('b24:form:submit',function(e){
-    try{last=collect(e.detail.object);}catch(err){last=null;}
-  });
-  addEventListener('b24:form:send:success',function(){
-    if(!last)return;
-    var body=JSON.stringify({fields:last,page:location.href});last=null;
-    fetch('/notify/send.php',{method:'POST',headers:{'Content-Type':'application/json'},body:body,keepalive:true}).catch(function(){});
-  });
 })();
 </script>
 
